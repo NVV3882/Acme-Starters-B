@@ -1,0 +1,73 @@
+# menu-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Cualquiera
+master.menu.anonymous.list-inventions = Inventos
+master.menu.anonymous.sponsorships = Patrocinios
+master.menu.anonymous.strategies = Estrategias
+master.menu.anonymous.auditReports = Informes de Auditoría
+master.menu.anonymous.campaigns = Campañas
+
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Cualquiera
+master.menu.authenticated.list-inventions = Inventos
+master.menu.authenticated.list-strategies = Estrategias
+master.menu.authenticated.list-sponsorships = Patrocinios
+master.menu.authenticated.list-audit-reports = Informes de Auditoría
+master.menu.authenticated.list-campaigns = Campañas
+
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrador
+master.menu.administrator.list-user-accounts = Ver cuentas de usuario
+master.menu.administrator.populate-db-initial = Poblar BD (inicial)
+master.menu.administrator.populate-db-sample = Poblar BD (ejemplos)
+master.menu.administrator.shut-system-down = Parar el sistema
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.list-my-sponsorships = Mis patrocinios
+
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audit-reports = Listar mis informes de auditoría
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Cuenta
+master.menu.user-account.general-profile = Perfil general
+master.menu.user-account.become-inventor =  Hazte inventor
+master.menu.user-account.inventor-profile = Perfil de inventor
+master.menu.user-account.become-sponsor = Hacerse patrocinador
+master.menu.user-account.sponsor-profile = Perfil de patrocinador
+master.menu.user-account.become-fundraiser = Hacerse recaudador
+master.menu.user-account.fundraiser-profile = Perfil de recaudador
+master.menu.user-account.become-auditor = Hacerse auditor
+master.menu.user-account.auditor-profile = Perfil de auditor
+master.menu.user-account.become-spokesperson = Hacerse portavoz
+master.menu.user-account.spokesperson-profile = Perfil de portavoz
+
+# master.menu.inventor ####################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-inventions = Listar mis inventos
+
+master.menu.fundraiser = Recaudador
+master.menu.fundraiser.list-strategies = Listar mis estrategias
+
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.list-campaigns = Listar mis campañas

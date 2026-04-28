@@ -1,0 +1,30 @@
+# messages-es.i18n
+
+auditor.audit-report.list.title = Lista de informes de auditoría
+
+auditor.audit-report.list.label.ticker = Ticker
+auditor.audit-report.list.label.name = Nombre
+auditor.audit-report.list.label.startMoment = Fecha de inicio
+auditor.audit-report.list.label.endMoment = Fecha de fin
+auditor.audit-report.list.label.draftMode = Modo borrador
+auditor.audit-report.list.button.create = Crear informe
+
+auditor.audit-report.form.title = Detalles del informe de auditoría
+
+auditor.audit-report.form.label.ticker = Ticker:
+auditor.audit-report.form.label.name = Nombre:
+auditor.audit-report.form.label.description = Descripción:
+auditor.audit-report.form.label.startMoment = Fecha de inicio:
+auditor.audit-report.form.label.endMoment = Fecha de fin:
+auditor.audit-report.form.label.moreInfo = Más información:
+auditor.audit-report.form.label.monthsActive = Meses activo:
+auditor.audit-report.form.label.hours = Horas totales:
+
+auditor.audit-report.form.button.auditSections = Secciones de auditoría
+auditor.audit-report.form.button.create = Crear
+auditor.audit-report.form.button.update = Editar
+auditor.audit-report.form.button.delete = Eliminar
+auditor.audit-report.form.button.publish = Publicar
+
+# Mensajes de error
+auditor.audit-report.form.error.noSections = No puede publicar un informe sin al menos una sección de auditoría.

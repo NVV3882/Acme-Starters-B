@@ -1,0 +1,49 @@
+# validation-en.i18n
+
+acme.validation.header.message = Header must have between 1 and 75 characters
+acme.validation.text.message = Text must have between 1 and 255 characters
+acme.validation.ticker.message = The ticker must follow this pattern: XX00-AAAAA (two uppercase letters, two digits, a hyphen, and 5 to 10 alphanumeric characters)
+
+acme.validation.sponsorship.duplicated-ticker.message = Reference already in use
+acme.validation.sponsorship.publicado-sin-donaciones.message = A sponsorship cannot be published without at least one donation
+acme.validation.sponsorship.intervalo-correcto-tiempo.message = The sponsorship start and end moments must define a valid future time interval
+acme.validation.sponsorship.son-donaciones-en-euros.message = All donations of a sponsorship must be in euros
+
+acme.validation.sponsorship.donations.error = The sponsorship must have at least one donation the moment of publish
+acme.validation.sponsorship.dates.error = The start and end moment must be a valid future interval
+acme.validation.sponsorship.startMoment.future = The startMoment must be after the moment of publish
+acme.validation.sponsorship.endMoment.future = The endMoment must be after the moment of publish
+
+acme.validation.invention.duplicated-ticker.message  = The ticker is already in use
+acme.validation.invention.published-without-parts.message = The Invention can not be published unless it has 1 part minimum
+acme.validation.invention.incorrect-dates-intervale.message = The start moment of an invention must be before the end moment if the invention is published. Additionally, the startMoment and endMoment must be after the baseMoment
+acme.validation.invention.currency.message = The application only accept money with the currency Euros
+
+acme.validation.invention.correctsMoments.StartMomentFuture = The startMoment must be a valid future moment
+acme.validation.invention.correctsMoments.EndMomentFuture = The endMoment must be a valid future moment
+acme.validation.invention.correctsMoments.CorrectInterval = The startMoment must be before the endMoment
+
+acme.validation.audit-report.duplicated-ticker.message = Reference already in use
+acme.validation.audit-report.correct-audit-sections.message = A audit report cannot be published without at least one section
+acme.validation.audit-report.incorrect-dates-intervale.message = The audit report start and end moments must define a valid future time interval
+
+acme.validation.audit-report.donations.error = The audit report must have at least one donation the moment of publish
+acme.validation.audit-report.dates.error = The start and end moment must be a valid future interval
+acme.validation.audit-report.startMoment.future = The startMoment must be after the moment of publish
+acme.validation.audit-report.endMoment.future = The endMoment must be after the moment of publish
+
+acme.validation.strategy.tactics.error = A strategy cannot be published without at least one tactic
+acme.validation.strategy.dates.error = The start date must be earlier than the end date
+acme.validation.strategy.startMoment.future = The start date must be in the future
+acme.validation.strategy.endMoment.future = The end date must be in the future
+acme.validation.strategy.duplicated-ticker.message = The strategy ticker is already in use
+acme.validation.strategy.publicado-sin-tactics.message = A strategy cannot be published without at least one tactic
+acme.validation.strategy.intervalo-correcto-tiempo.message = The interval between start and end must be valid and in the future for a published strategy
+
+acme.validation.campaign.duplicated-ticker.message = Reference already in use
+acme.validation.campaign.publicado-sin-milestone.message = A campaign cannot be published without at least one milestone
+acme.validation.campaign.intervalo-correcto-tiempo.message = The campaign start and end moments must define a valid future time interval
+acme.validation.campaign.milestones.error = The campaign must have at least one milestone the moment of publish
+acme.validation.campaign.dates.error = The start and end moment must be a valid future interval
+acme.validation.campaign.startMoment.future = The startMoment must be after the moment of publish
+acme.validation.campaign.endMoment.future = The endMoment must be after the moment of publish

@@ -1,0 +1,23 @@
+# messages-en.i18n
+
+any.audit-report.list.title = Listing of published audit reports
+
+any.audit-report.list.label.ticker = Ticker
+any.audit-report.list.label.name = Name
+any.audit-report.list.label.startMoment = Start moment
+any.audit-report.list.label.endMoment = End moment
+
+
+any.audit-report.form.title = Audit report details
+
+any.audit-report.form.label.ticker = Ticker:
+any.audit-report.form.label.name = Name:
+any.audit-report.form.label.description = Description:
+any.audit-report.form.label.startMoment = Start moment:
+any.audit-report.form.label.endMoment = End moment:
+any.audit-report.form.label.moreInfo = More info:
+any.audit-report.form.label.monthsActive = Months active:
+any.audit-report.form.label.hours = Total hours:
+
+any.audit-report.form.button.sections = Audit sections
+any.audit-report.form.button.auditor = Auditor

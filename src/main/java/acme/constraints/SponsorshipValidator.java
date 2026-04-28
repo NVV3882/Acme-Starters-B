@@ -1,0 +1,79 @@
+
+package acme.constraints;
+
+import java.util.Date;
+
+import javax.validation.ConstraintValidatorContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import acme.client.components.validation.AbstractValidator;
+import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
+import acme.entities.sponsorships.Sponsorship;
+import acme.entities.sponsorships.SponsorshipRepository;
+
+@Validator
+public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sponsorship> {
+
+	//Estado interno
+
+	@Autowired
+	private SponsorshipRepository repositorio;
+
+
+	@Override
+	protected void initialise(final ValidSponsorship annotation) {
+		assert annotation != null;
+	}
+
+	@Override
+	public boolean isValid(final Sponsorship patrocinio, final ConstraintValidatorContext context) {
+
+		assert context != null;
+		boolean result;
+		if (patrocinio == null)
+			result = true;
+		else {
+			{
+				boolean patrocinioUnico;
+				Sponsorship patrocinioExistente;
+
+				patrocinioExistente = this.repositorio.findSponsorshipByTicker(patrocinio.getTicker());
+				patrocinioUnico = patrocinioExistente == null || patrocinioExistente.equals(patrocinio);
+
+				super.state(context, patrocinioUnico, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
+			}
+			{
+
+				boolean publicadoConDonaciones;
+				boolean tieneDonaciones = false;
+				Integer numeroDonaciones = this.repositorio.countDonationsBySponsorshipId(patrocinio.getId());
+				tieneDonaciones = numeroDonaciones != null && numeroDonaciones >= 1;
+				publicadoConDonaciones = patrocinio.getDraftMode() || tieneDonaciones;
+
+				super.state(context, publicadoConDonaciones, "totalMoney", "acme.validation.sponsorship.publicado-sin-donaciones.message");
+			}
+			{
+				if (patrocinio.getDraftMode().equals(false)) {
+					boolean intervaloCorrectoTiempo;
+					Date fechaInicio = patrocinio.getStartMoment();
+					Date fechaFinal = patrocinio.getEndMoment();
+					intervaloCorrectoTiempo = fechaInicio != null && fechaFinal != null && MomentHelper.isAfter(fechaFinal, fechaInicio);
+					super.state(context, intervaloCorrectoTiempo, "startMoment", "acme.validation.sponsorship.intervalo-correcto-tiempo.message");
+				}
+			}
+
+			{
+				boolean sonDonacionesEnEuros;
+
+				sonDonacionesEnEuros = this.repositorio.countNonEuroDonations(patrocinio.getId()) == 0;
+
+				super.state(context, sonDonacionesEnEuros, "totalMoney", "acme.validation.sponsorship.son-donaciones-en-euros.message");
+			}
+			result = !super.hasErrors(context);
+		}
+		return result;
+	}
+
+}
