@@ -20,3 +20,6 @@ user-account-inventor-03,true,"UserIdentity{name: 'Isaac', surname: 'Newton', em
 user-account-spokesperson-01,true,"UserIdentity{name: 'Juan', surname: 'spokesperson', email: 'juanspokesperson@acme.com'}",spokesperson1,spokesperson1
 user-account-spokesperson-02,true,"UserIdentity{name: 'David', surname: 'spokesperson', email: 'davidspokesperson@acme.com'}",spokesperson2,spokesperson2
 user-account-spokesperson-03,true,"UserIdentity{name: 'Cristina', surname: 'spokesperson', email: 'cristinaspokesperson@acme.com'}",spokesperson3,spokesperson3
+user-account-manager-01,true,"UserIdentity{name: 'Pepe', surname: 'Piropi', email: 'pepepiropi@acme.com'}",manager1,manager1
+user-account-manager-02,true,"UserIdentity{name: 'Leo', surname: 'Harlem', email: 'leoharto@acme.com'}",manager2,manager2
+user-account-manager-03,true,"UserIdentity{name: 'Mariscal', surname: 'Ruiz', email: 'mariquitaruiz@acme.com'}",manager3,manager3

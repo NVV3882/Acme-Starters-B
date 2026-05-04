@@ -1,0 +1,19 @@
+key,slogan,pictureUrl,targetUrl
+# base entity
+advertisement-00,"",http://,http://
+# slogan - standard variations
+advertisement-01,"",http://,http://
+advertisement-02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem",http://,http://
+# slogan - no singular values
+# pictureUrl - standard variations
+advertisement-11,"Lorem ipsum dolor sit amet, consectetu",ftp://,http://
+advertisement-12,"Lorem ipsum dolor sit amet, consectetu",http://a,http://,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/,http://lorem.com/ipsum
+advertisement-13,"Lorem ipsum dolor sit amet, consectetu",ftp://a,http://,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X,http://lorem.com/ipsum
+advertisement-14,"Lorem ipsum dolor sit amet, consectetu","http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",http://
+# pictureUrl - no singular values
+# targetUrl - standard variations
+advertisement-27,"Lorem ipsum dolor sit amet, consectetu",http://,ftp://
+advertisement-28,"Lorem ipsum dolor sit amet, consectetu",http://,http://a,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/
+advertisement-29,"Lorem ipsum dolor sit amet, consectetu",http://,ftp://a,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X
+advertisement-30,"Lorem ipsum dolor sit amet, consectetu",http://,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x"
+# targetUrl - no singular values

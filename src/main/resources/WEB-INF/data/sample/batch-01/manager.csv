@@ -1,0 +1,4 @@
+key,key:userAccount,position,skills,executive
+manager-01,user-account-manager-01,"Hola, soy Pepe. Mi posicion es...","hábil dirigiendo",true
+manager-02,user-account-manager-02,"Hola, soy Leo. Mi posicion es...","buen ojeador",true
+manager-03,user-account-manager-03,"Hola, soy Mariscal. Mi posicion es...","bueno con la espada",false
