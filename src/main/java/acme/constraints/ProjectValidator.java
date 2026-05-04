@@ -1,4 +1,3 @@
-
 package acme.constraints;
 
 import java.util.Date;
@@ -30,15 +29,6 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 		if (project == null)
 			result = true;
 		else {
-			{
-				boolean tituloUnico;
-				Project projectExistente;
-
-				projectExistente = this.repositorio.findProjectByTitle(project.getTitle());
-				tituloUnico = projectExistente == null || projectExistente.equals(project);
-
-				super.state(context, tituloUnico, "title", "acme.validation.project.duplicated-title.message");
-			}
 
 			if (project.getDraftMode().equals(false)) {
 				boolean intervaloCorrectoTiempo;
@@ -50,37 +40,62 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.project.incorrect-dates-intervale.message");
 			}
 			{
-				//draftMode cant be true if there isnt at least one invention associated to the project
 				boolean projectInventionsCorrectos;
 				if (project.getId() != 0) {
-					projectInventionsCorrectos = !this.repositorio.findInventionsByProjectId(project.getId()).isEmpty() || project.getDraftMode();
-					super.state(context, projectInventionsCorrectos, "*", "acme.validation.project.correct-project-inventions.message");
-				} else
-					super.state(context, true, "*", "acme.validation.project.incorrect-project-inventions.message");
+					projectInventionsCorrectos = this.repositorio.existsInventionsByProjectId(project.getId()) || project.getDraftMode();
+					super.state(context, projectInventionsCorrectos, "*", "acme.validation.project.incorrect-project-inventions.message");
+				}
 			}
 			{
-				boolean projectInventionsMomentsCorrectos;
-				boolean projectCampaignsMomentsCorrectos;
-				boolean projectStrategiesMomentsCorrectos;
+				boolean projectComponentsMomentsCorrectos;
 
 				if (project.getDraftMode().equals(false)) {
 					Date kickOffMoment = project.getKickOffMoment();
 					Date closeOutMoment = project.getCloseOutMoment();
 
-					projectInventionsMomentsCorrectos = this.repositorio.findInventionsByProjectId(project.getId()).stream()
-						.allMatch(i -> MomentHelper.isInRange(i.getStartMoment(), kickOffMoment, closeOutMoment) && MomentHelper.isInRange(i.getEndMoment(), kickOffMoment, closeOutMoment));
+					long outOfRangeInventions = this.repositorio.countOutOfRangeInventions(project.getId(), kickOffMoment, closeOutMoment);
+					long outOfRangeCampaigns = this.repositorio.countOutOfRangeCampaigns(project.getId(), kickOffMoment, closeOutMoment);
+					long outOfRangeStrategies = this.repositorio.countOutOfRangeStrategies(project.getId(), kickOffMoment, closeOutMoment);
 
-					projectCampaignsMomentsCorrectos = this.repositorio.findCampaignsByProjectId(project.getId()).stream()
-						.allMatch(c -> MomentHelper.isInRange(c.getStartMoment(), kickOffMoment, closeOutMoment) && MomentHelper.isInRange(c.getEndMoment(), kickOffMoment, closeOutMoment));
+					projectComponentsMomentsCorrectos = outOfRangeInventions + outOfRangeCampaigns + outOfRangeStrategies == 0 || project.getDraftMode();
+					super.state(context, projectComponentsMomentsCorrectos, "*", "acme.validation.project.incorrect-project-components-moments.message");
+				}
+			}
+			{
+				boolean momentOfPublicationCorrecto;
+				if (project.getDraftMode().equals(true)) {
+					momentOfPublicationCorrecto = project.getMomentOfPublication() == null;
+					super.state(context, momentOfPublicationCorrecto, "*", "acme.validation.project.incorrect-moment-of-publication.message");
+				}
+			}
+			{
+				//project.draftMode = false -> todos los draftMode de sus componentes asociados = false
+				boolean projectComponentsDraftModeCorrectos;
+				if (project.getDraftMode().equals(false)) {
+					// Use repository boolean queries to avoid loading entities
+					boolean hasInventionsWithDraftTrue = this.repositorio.existsInventionsWithDraftModeTrueByProjectId(project.getId());
+					boolean hasCampaignsWithDraftTrue = this.repositorio.existsCampaignsWithDraftModeTrueByProjectId(project.getId());
+					boolean hasStrategiesWithDraftTrue = this.repositorio.existsStrategiesWithDraftModeTrueByProjectId(project.getId());
 
-					projectStrategiesMomentsCorrectos = this.repositorio.findStrategiesByProjectId(project.getId()).stream()
-						.allMatch(s -> MomentHelper.isInRange(s.getStartMoment(), kickOffMoment, closeOutMoment) && MomentHelper.isInRange(s.getEndMoment(), kickOffMoment, closeOutMoment));
+					projectComponentsDraftModeCorrectos = !hasInventionsWithDraftTrue && !hasCampaignsWithDraftTrue && !hasStrategiesWithDraftTrue;
+					super.state(context, projectComponentsDraftModeCorrectos, "*", "acme.validation.project.incorrect-project-components-draft-mode.message");
+				}
 
-					boolean projectComponentsMomentsCorrectos = projectInventionsMomentsCorrectos && projectCampaignsMomentsCorrectos && projectStrategiesMomentsCorrectos;
-					super.state(context, projectComponentsMomentsCorrectos, "*", "acme.validation.project.correct-project-components-moments.message");
-				} else
-					super.state(context, true, "*", "acme.validation.project.incorrect-project-components-moments.message");
+			}
+			{
+				// New validation: if project is published (draftMode == false), kickoff and closeout must be after momentOfPublication (if present)
+				boolean publicationMomentsCorrectos;
+				if (project.getDraftMode().equals(false) && project.getMomentOfPublication() != null) {
+					Date momentOfPublication = project.getMomentOfPublication();
+					Date kickOffMoment = project.getKickOffMoment();
+					Date closeOutMoment = project.getCloseOutMoment();
 
+					// Both moments must be non-null and strictly after momentOfPublication
+					publicationMomentsCorrectos = kickOffMoment != null && closeOutMoment != null
+						&& MomentHelper.isAfter(kickOffMoment, momentOfPublication)
+						&& MomentHelper.isAfter(closeOutMoment, momentOfPublication);
+					super.state(context, publicationMomentsCorrectos, "*", "acme.validation.project.components-after-publication.message");
+				}
 			}
 			result = !super.hasErrors(context);
 		}

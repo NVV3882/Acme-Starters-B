@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -17,6 +18,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidProject;
 import acme.constraints.ValidText;
+import acme.realms.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,7 +36,7 @@ public class Project extends AbstractEntity {
 
 	@Mandatory
 	@ValidHeader
-	@Column(unique = true)
+	@Column
 	private String				title;
 
 	@Mandatory
@@ -79,13 +81,10 @@ public class Project extends AbstractEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	/*
-	 * @Mandatory
-	 * 
-	 * @Valid
-	 * 
-	 * @ManyToOne(optional = false)
-	 * private Manager manager;
-	 */
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Manager manager;
 
 }
