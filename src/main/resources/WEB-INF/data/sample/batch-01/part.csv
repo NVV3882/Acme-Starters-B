@@ -32,7 +32,7 @@ part-23,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, co
 part-24,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 1000000.00,CORE,invention-00
 # cost - no singular values
 # kind - standard variations
-part-25,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,MANDATORY,invention-00
+part-25,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,MANDATORY,invention-52
 part-26,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,OPTIONAL,invention-00
 # kind - no singular values
 # invention - standard variations
