@@ -25,6 +25,7 @@ import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.entities.project.Project;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -110,6 +111,10 @@ public class Campaign extends AbstractEntity {
 	@Mandatory
 	@ManyToOne(optional = false)
 	@Valid
-	private Spokesperson spokesperson;
+	private Spokesperson	spokesperson;
+
+	@Optional
+	@ManyToOne()
+	private Project			project;
 
 }
