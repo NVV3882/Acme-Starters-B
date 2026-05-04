@@ -26,6 +26,7 @@ import acme.constraints.ValidHeader;
 import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.entities.project.Project;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -106,6 +107,10 @@ public class Sponsorship extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Sponsor sponsor;
+	private Sponsor	sponsor;
+
+	@Optional
+	@ManyToOne()
+	private Project	project;
 
 }

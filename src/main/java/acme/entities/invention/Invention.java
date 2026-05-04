@@ -26,6 +26,7 @@ import acme.constraints.ValidHeader;
 import acme.constraints.ValidInvention;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.entities.project.Project;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -112,6 +113,10 @@ public class Invention extends AbstractEntity {
 	//relaciones
 	@Mandatory
 	@ManyToOne(optional = false)
-	private Inventor inventor;
+	private Inventor	inventor;
+
+	@Optional
+	@ManyToOne()
+	private Project		project;
 
 }
