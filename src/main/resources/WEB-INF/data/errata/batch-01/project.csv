@@ -1,0 +1,29 @@
+key,title,keyWords,description,kickOffMoment,closeOutMoment,momentOfPublication,draftMode,key:manager
+# base entity
+project-00,"","","","","","",TRUE,manager-01
+# title - standard variations
+project-01,"","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,null,TRUE,manager-01
+project-02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,null,TRUE,manager-01
+# title - no singular values
+# keyWords - standard variations
+project-03,"Lorem ipsum dolor sit amet, consectetu","","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,null,TRUE,manager-01
+project-04,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,null,TRUE,manager-01
+# keyWords - no singular values
+# description - standard variations
+project-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","",2112/01/02 00:00,2112/01/03 00:00,null,TRUE,manager-01
+project-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",2112/01/02 00:00,2112/01/03 00:00,null,TRUE,manager-01
+# description - no singular values
+# kickOffMoment - standard variations (limits)
+project-25,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",1999/12/31 23:59,2112/01/02 00:00,null,TRUE,manager-01
+project-26,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2201/01/01 00:00,2112/01/02 00:00,null,TRUE,manager-01
+# kickOffMoment - no singular values
+# closeOutMoment - standard variations (limits),"","","",""
+project-29,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,1999/12/31 23:59,null,TRUE,manager-01
+project-30,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2201/01/01 00:00,null,TRUE,manager-01
+# closeOutMoment - no singular variations
+# momentOfPublication - standard variations (limits)
+project-31,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,2112/01/03 00:00,TRUE,manager-01 
+# momentOfPublication - no singular values
+# draft-mode - standard variations (no hay manager asociado real, ni invento asociado real)
+project-33,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,2112/01/01 00:00,FALSE,manager-01
+# draft-mode no singular variations
