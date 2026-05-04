@@ -15,6 +15,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidProject;
 import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-//@ValidProject :TODO
+@ValidProject
 public class Project extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -33,7 +34,7 @@ public class Project extends AbstractEntity {
 
 	@Mandatory
 	@ValidHeader
-	@Column
+	@Column(unique = true)
 	private String				title;
 
 	@Mandatory
