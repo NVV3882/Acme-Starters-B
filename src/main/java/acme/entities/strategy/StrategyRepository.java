@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StrategyRepository extends CrudRepository<Strategy, Integer> {
 
+	@Query("select s from Strategy s where s.id = :id")
+	Strategy findStrategyById(int id);
+
 	@Query("select sum(t.expectedPercentage) from Tactic t where t.strategy.id = :strategyId")
 	Double getExpectedPercentage(int strategyId);
 

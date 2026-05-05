@@ -46,6 +46,12 @@ master.menu.sponsor.list-my-sponsorships = Mis patrocinios
 master.menu.auditor = Auditor
 master.menu.auditor.list-my-audit-reports = Listar mis informes de auditoría
 
+
+# master.menu.manager ##########################################################
+
+master.menu.manager = Manager
+master.menu.project.list-projects = Listar mis proyectos
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
