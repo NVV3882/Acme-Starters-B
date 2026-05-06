@@ -24,6 +24,8 @@ manager.project.form.label.effort = Effort (months):
 manager.project.form.button.inventions = Inventions
 manager.project.form.button.campaigns = Campaigns
 manager.project.form.button.strategies = Strategies
+manager.project.form.button.members = Members
+manager.project.form.button.manager = Manager
 manager.project.form.button.publish = Publish
 manager.project.form.button.create = Create
 

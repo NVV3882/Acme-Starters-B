@@ -39,7 +39,7 @@ public class ManagerProjectCreateService extends AbstractService<Manager, Projec
 
 	@Override
 	public void bind() {
-		super.bindObject(this.project, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		super.bindObject(this.project, "title", "keyWords", "description", "kickOffMoment", "closeOutMoment");
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class ManagerProjectCreateService extends AbstractService<Manager, Projec
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.project, "title", "keyWords", "description", "kickOffMoment", "closeOutMoment", "momentOfPublication", "effort", "draftMode");
+		super.unbindObject(this.project, "title", "keyWords", "description", "kickOffMoment", "closeOutMoment", "momentOfPublication", "draftMode");
 	}
 
 }

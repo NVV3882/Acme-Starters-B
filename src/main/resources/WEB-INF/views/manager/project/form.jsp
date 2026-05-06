@@ -18,12 +18,18 @@
 			<acme:button code="manager.project.form.button.inventions" action="/manager/invention/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.campaigns" action="/manager/campaign/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.strategies" action="/manager/strategy/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.members" action="/any/project-member/list?projectId=${id}"/>
+			
+			<acme:button code="manager.project.form.button.manager" action="/any/manager/show?projectId=${id}"/>
 		</jstl:when>
 
 		<jstl:when test="${acme:anyOf(_command, 'show') && draftMode == true}">
 			<acme:button code="manager.project.form.button.inventions" action="/manager/invention/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.campaigns" action="/manager/campaign/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.strategies" action="/manager/strategy/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.members" action="/any/project-member/list?projectId=${id}"/>
+			
+			<acme:button code="manager.project.form.button.manager" action="/any/manager/show?projectId=${id}"/>
 			<acme:submit code="manager.project.form.button.publish" action="/manager/project/publish?id=${id}"/>
 			
 		</jstl:when>

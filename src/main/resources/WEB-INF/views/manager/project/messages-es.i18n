@@ -24,6 +24,8 @@ manager.project.form.label.effort = Esfuerzo (meses):
 manager.project.form.button.inventions = Invenciones
 manager.project.form.button.campaigns = Campañas
 manager.project.form.button.strategies = Estrategias
+manager.project.form.button.members = Miembros
+manager.project.form.button.manager = Gestor
 manager.project.form.button.publish = Publicar
 manager.project.form.button.create = Crear
 
