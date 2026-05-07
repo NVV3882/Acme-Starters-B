@@ -9,7 +9,6 @@ import javax.persistence.Transient;
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.basis.AbstractSquad;
 import acme.client.components.validation.Mandatory;
-import acme.entities.strategy.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
 

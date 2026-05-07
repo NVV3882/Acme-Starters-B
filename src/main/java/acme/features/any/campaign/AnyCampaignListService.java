@@ -18,10 +18,16 @@ public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 
 	Collection<Campaign>	campañas;
 
+	int						campaignId;
+
 
 	@Override
 	public void load() {
-		this.campañas = this.repositorio.listAllCampaigns();
+		if (super.getRequest().hasData("projectId", Integer.class)) {
+			Integer projectId = super.getRequest().getData("projectId", Integer.class);
+			this.campañas = this.repositorio.listAllCampaignsByProjectId(projectId);
+		} else
+			this.campañas = this.repositorio.listAllCampaigns();
 	}
 
 	@Override

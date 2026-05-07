@@ -19,4 +19,6 @@ public interface AnyCampaignRepository extends AbstractRepository {
 	@Query("select count(c) > 0 from Campaign c where c.id=:id and c.draftMode = false")
 	Boolean campaignIsPublished(int id);
 
+	@Query("select c from Campaign c where c.project.id=:projectId and c.draftMode = false")
+	Collection<Campaign> listAllCampaignsByProjectId(int projectId);
 }

@@ -1,5 +1,11 @@
 # messages-en.i18n
 
+any.spokesperson.list.title = Listing of spokespersons
+
+any.spokesperson.list.label.cv = CV
+any.spokesperson.list.label.achievements = Achievements
+any.spokesperson.list.label.licensed = Licensed
+
 any.spokesperson.form.title = Spokesperson details
 
 any.spokesperson.form.label.cv = CV:

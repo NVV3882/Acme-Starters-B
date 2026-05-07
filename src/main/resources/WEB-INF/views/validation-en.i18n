@@ -47,3 +47,11 @@ acme.validation.campaign.milestones.error = The campaign must have at least one 
 acme.validation.campaign.dates.error = The start and end moment must be a valid future interval
 acme.validation.campaign.startMoment.future = The startMoment must be after the moment of publish
 acme.validation.campaign.endMoment.future = The endMoment must be after the moment of publish
+
+acme.validation.project.components-after-publication.message = El kickOffMoment y el closeOutMoment tiene que ser después del momentOfPublication
+acme.validation.project.incorrect-project-components-draft-mode.message = Si el draftMode de project es falso, el draftMode de sus componentes debe ser 0 también
+acme.validation.project.incorrect-moment-of-publication.message = Si el draftMode es verdadero, el momentOfPublication debe ser nulo
+acme.validation.project.incorrect-project-components-moments.message = Si el draftMode de project es falso, el startMoment y el closeMoment de sus componentes debe estar dentro del rango kickOffMoment-closeOutMoment
+acme.validation.project.incorrect-project-inventions.message = Si el draftMode de project es falso, tiene que tener un invento asociado
+acme.validation.project.incorrect-dates-intervale.message = Si el draftMode de project es falso, el kickOffMoment tiene que ser anterior al closeOutMoment
+

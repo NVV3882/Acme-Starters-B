@@ -1,0 +1,29 @@
+# messages-es.i18n
+
+any.project.list.title = Lista de proyectos publicados
+
+any.project.list.label.title = Título
+any.project.list.label.keyWords = Palabras clave
+any.project.list.label.kickOffMoment = Fecha de inicio
+any.project.list.label.closeOutMoment = Fecha de cierre
+any.project.list.label.draftMode = Modo Borrador
+
+any.project.form.title = Detalles del proyecto
+
+any.project.form.label.title = Título:
+any.project.form.label.keyWords = Palabras clave:
+any.project.form.label.description = Descripción:
+any.project.form.label.kickOffMoment = Fecha de inicio:
+any.project.form.label.closeOutMoment = Fecha de cierre:
+any.project.form.label.momentOfPublication = Fecha de publicación:
+any.project.form.label.effort = Esfuerzo:
+any.project.form.label.draftMode = Modo Borrador:
+
+
+any.project.form.button.manager = Manager
+any.project.form.button.inventions = Inventos
+any.project.form.button.campaigns = Campañas
+any.project.form.button.strategies = Estrategias
+any.project.form.button.inventors = Inventores
+any.project.form.button.spokespeople = Portavoces
+any.project.form.button.fundraisers = Recaudadores

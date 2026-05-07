@@ -48,9 +48,9 @@ project-31,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet,
 project-32,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2200/12/31 23:58,null,TRUE,manager-01
 # closeOutMoment - no singular variations
 # draft-mode & momentOfPublication - standard variations
-project-33,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,2112/01/01 00:00,FALSE,manager-01
-# draft-mode no singular variations
+project-33,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2111/01/02 00:00,2113/01/03 00:00,2110/01/01 00:00,FALSE,manager-01
+# draft-mode no singular variations,"","","","",""
 # manager - standard variations
-project-50,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,2112/01/01 00:00,FALSE,manager-02
+project-50,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2111/01/02 00:00,2113/01/03 00:00,2110/01/01 00:00,FALSE,manager-02
 # intervalo moments
-project-51,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:01,2112/01/02 22:59,FALSE,manager-01
+project-51,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2111/01/02 23:00,2113/01/02 23:01,2110/01/02 22:59,FALSE,manager-01

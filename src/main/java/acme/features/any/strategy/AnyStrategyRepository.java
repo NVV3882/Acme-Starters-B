@@ -21,4 +21,7 @@ public interface AnyStrategyRepository extends AbstractRepository {
 	@Query("select count(s) > 0 from Strategy s where s.id=:id and s.draftMode = false")
 	Boolean strategyIsPublished(int id);
 
+	@Query("select s from Strategy s where s.project.id=:projectId and s.draftMode = false")
+	Collection<Strategy> listAllStrategiesByProjectId(int projectId);
+
 }

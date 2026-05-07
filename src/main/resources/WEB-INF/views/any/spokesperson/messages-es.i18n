@@ -1,5 +1,11 @@
 # messages-es.i18n
 
+any.spokesperson.list.title = Listado de portavoces
+
+any.spokesperson.list.label.cv = CV
+any.spokesperson.list.label.achievements = Logros
+any.spokesperson.list.label.licensed = Licenciado
+
 any.spokesperson.form.title = Detalles del portavoz
 
 any.spokesperson.form.label.cv = CV:

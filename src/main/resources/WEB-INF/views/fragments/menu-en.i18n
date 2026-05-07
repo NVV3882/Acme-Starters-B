@@ -16,6 +16,7 @@ master.menu.anonymous.sponsorships = Sponsorships
 master.menu.anonymous.strategies = Strategies
 master.menu.anonymous.auditReports = Audit Reports
 master.menu.anonymous.campaigns = Campaigns
+master.menu.anonymous.projects = Projects
 
 
 # master.menu.authenticated ###################################################
