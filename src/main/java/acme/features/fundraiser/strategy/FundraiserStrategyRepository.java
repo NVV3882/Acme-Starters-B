@@ -1,3 +1,4 @@
+
 package acme.features.fundraiser.strategy;
 
 import java.util.Collection;
@@ -6,9 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
-import acme.entities.strategy.Fundraiser;
 import acme.entities.strategy.Strategy;
 import acme.entities.strategy.Tactic;
+import acme.realms.Fundraiser;
 
 @Repository
 public interface FundraiserStrategyRepository extends AbstractRepository {

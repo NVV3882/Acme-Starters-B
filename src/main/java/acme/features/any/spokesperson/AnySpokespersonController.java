@@ -17,6 +17,7 @@ public class AnySpokespersonController extends AbstractController<Any, Spokesper
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
+		super.addBasicCommand("list", AnySpokespersonListService.class);
 		super.addBasicCommand("show", AnySpokespersonShowService.class);
 	}
 }

@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Fundraiser;
 import acme.entities.strategy.Strategy;
 import acme.entities.strategy.Tactic;
+import acme.realms.Fundraiser;
 
 public class FundraiserStrategyPublishService extends AbstractService<Fundraiser, Strategy> {
 

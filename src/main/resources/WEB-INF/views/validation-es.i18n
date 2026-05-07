@@ -48,3 +48,10 @@ acme.validation.campaign.milestones.error = La campana debe tener al menos un hi
 acme.validation.campaign.dates.error = La fecha de inicio y fin deben formar un intervalo valido
 acme.validation.campaign.startMoment.future = La fecha de inicio debe ser posterior al momento de publicacion
 acme.validation.campaign.endMoment.future = La fecha de fin debe ser posterior al momento de publicacion
+
+acme.validation.project.components-after-publication.message = El kickOffMoment y el closeOutMoment tiene que ser después del momentOfPublication
+acme.validation.project.incorrect-project-components-draft-mode.message = Si el draftMode de project es falso, el draftMode de sus componentes debe ser 0 también
+acme.validation.project.incorrect-moment-of-publication.message = Si el draftMode es verdadero, el momentOfPublication debe ser nulo
+acme.validation.project.incorrect-project-components-moments.message = Si el draftMode de project es falso, el startMoment y el closeMoment de sus componentes debe estar dentro del rango kickOffMoment-closeOutMoment
+acme.validation.project.incorrect-project-inventions.message = Si el draftMode de project es falso, tiene que tener un invento asociado
+acme.validation.project.incorrect-dates-intervale.message = Si el draftMode de project es falso, el kickOffMoment tiene que ser anterior al closeOutMoment

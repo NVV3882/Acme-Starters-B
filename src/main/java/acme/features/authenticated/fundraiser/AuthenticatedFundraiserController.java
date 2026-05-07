@@ -1,3 +1,4 @@
+
 package acme.features.authenticated.fundraiser;
 
 import javax.annotation.PostConstruct;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Authenticated;
 import acme.client.controllers.AbstractController;
-import acme.entities.strategy.Fundraiser;
+import acme.realms.Fundraiser;
 
 @Controller
 public class AuthenticatedFundraiserController extends AbstractController<Authenticated, Fundraiser> {

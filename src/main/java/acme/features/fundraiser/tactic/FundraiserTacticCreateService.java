@@ -1,3 +1,4 @@
+
 package acme.features.fundraiser.tactic;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,10 +7,10 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Fundraiser;
 import acme.entities.strategy.Strategy;
 import acme.entities.strategy.Tactic;
 import acme.entities.strategy.TacticKind;
+import acme.realms.Fundraiser;
 
 @Service
 public class FundraiserTacticCreateService extends AbstractService<Fundraiser, Tactic> {

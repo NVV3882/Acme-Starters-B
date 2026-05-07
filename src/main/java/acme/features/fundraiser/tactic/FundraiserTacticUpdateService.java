@@ -1,3 +1,4 @@
+
 package acme.features.fundraiser.tactic;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,9 +7,9 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Fundraiser;
 import acme.entities.strategy.Tactic;
 import acme.entities.strategy.TacticKind;
+import acme.realms.Fundraiser;
 
 @Service
 public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, Tactic> {
@@ -45,12 +46,13 @@ public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, T
 		super.validateObject(this.tactic);
 
 		Double otherPercentages = this.repository.getExpectedPercentageExcluding(this.tactic.getStrategy().getId(), this.tactic.getId());
-		if (otherPercentages == null) otherPercentages = 0.0;
+		if (otherPercentages == null)
+			otherPercentages = 0.0;
 		Double tacticPercentage = this.tactic.getExpectedPercentage();
 		if (tacticPercentage != null) {
 			boolean percentageValid = otherPercentages + tacticPercentage <= 100.0;
 			super.state(percentageValid, "expectedPercentage", "fundraiser.tactic.valid.score");
-		} 
+		}
 	}
 
 	@Override
