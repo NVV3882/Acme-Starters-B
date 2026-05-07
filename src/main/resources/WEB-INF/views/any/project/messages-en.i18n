@@ -1,0 +1,30 @@
+# messages-en.i18n
+
+any.project.list.title = Listing of published projects
+
+any.project.list.label.title = Title
+any.project.list.label.keyWords = Key Words
+any.project.list.label.kickOffMoment = Kick off moment
+any.project.list.label.closeOutMoment = Close out moment
+any.project.list.label.draftMode = Draft Mode
+
+
+any.project.form.title = Project details
+
+any.project.form.label.title = Title:
+any.project.form.label.keyWords = Key Words:
+any.project.form.label.description = Description:
+any.project.form.label.kickOffMoment = Kick off moment:
+any.project.form.label.closeOutMoment = Close out moment:
+any.project.form.label.momentOfPublication = Moment of publication:
+any.project.form.label.effort = Effort:
+any.project.form.label.draftMode = Draft Mode:
+
+
+any.project.form.button.manager = Manager
+any.project.form.button.inventions = Inventions
+any.project.form.button.campaigns = Campaigns
+any.project.form.button.strategies = Strategies
+any.project.form.button.inventors = Inventors
+any.project.form.button.spokespeople = Spokespeople
+any.project.form.button.fundraisers = Fundraisers

@@ -1,3 +1,4 @@
+
 package acme.features.authenticated.fundraiser;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,7 @@ import acme.client.components.principals.Authenticated;
 import acme.client.components.principals.UserAccount;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Fundraiser;
+import acme.realms.Fundraiser;
 
 @Service
 public class AuthenticatedFundraiserCreateService extends AbstractService<Authenticated, Fundraiser> {
@@ -15,7 +16,7 @@ public class AuthenticatedFundraiserCreateService extends AbstractService<Authen
 	@Autowired
 	AuthenticatedFundraiserRepository	repositorio;
 
-	Fundraiser						recaudador;
+	Fundraiser							recaudador;
 
 
 	@Override

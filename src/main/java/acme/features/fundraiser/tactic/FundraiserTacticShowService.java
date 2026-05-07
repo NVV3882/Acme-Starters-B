@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Fundraiser;
 import acme.entities.strategy.Tactic;
 import acme.entities.strategy.TacticKind;
+import acme.realms.Fundraiser;
 
 @Service
 public class FundraiserTacticShowService extends AbstractService<Fundraiser, Tactic> {

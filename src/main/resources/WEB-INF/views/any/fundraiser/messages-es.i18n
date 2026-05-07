@@ -1,5 +1,11 @@
 # messages-es.i18n
 
+any.fundraiser.list.title = Listado de recaudadores
+
+any.fundraiser.list.label.bank = Banco
+any.fundraiser.list.label.statement = Declaración
+any.fundraiser.list.label.agent = Agente
+
 any.fundraiser.form.title = Detalles del recaudador
 
 any.fundraiser.form.label.bank = Banco

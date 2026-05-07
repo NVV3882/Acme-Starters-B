@@ -1,4 +1,7 @@
-any.manager.form.title = Detalles del gestor
-any.manager.form.label.position = Posicion
-any.manager.form.label.skills = Competencias
-any.manager.form.label.executive = Ejecutivo
+# messages-en.i18n
+
+any.manager.form.title = Detalles del manager
+
+any.manager.form.label.position = Posicion:
+any.manager.form.label.skills = Habilidades:
+any.manager.form.label.executive = Ejecutivo?

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
+import acme.entities.campaign.Campaign;
 import acme.realms.Spokesperson;
 
 @Service
@@ -15,26 +16,37 @@ public class AnySpokespersonShowService extends AbstractService<Any, Spokesperso
 	AnySpokespersonRepository	repositorio;
 
 	Spokesperson				spokesperson;
+	Campaign				campaign;
+	int campaignId;
 
 
 	@Override
 	public void load() {
-		int campaignId = super.getRequest().getData("campaignId", int.class);
-		this.spokesperson = this.repositorio.findSpokespersonByCampaignId(campaignId);
+		if(super.getRequest().hasData("id", Integer.class)) {
+			Integer id = super.getRequest().getData("id", Integer.class);
+			this.spokesperson = this.repositorio.findSpokespersonById(id);
+		}
+		else {
+			int campaignId = super.getRequest().getData("campaignId", int.class);
+			this.spokesperson = this.repositorio.findSpokespersonByCampaignId(campaignId);
+			this.campaign = this.repositorio.findCampaignById(campaignId);
+		}
 	}
 
 	@Override
 	public void authorise() {
-
-		Boolean res;
-		int campaignId = super.getRequest().getData("campaignId", int.class);
-
-		if (this.repositorio.campaignIsPublished(campaignId).equals(true))
-			res = true;
-		else
-			res = false;
-
-		super.setAuthorised(res);
+		if(super.getRequest().hasData("id", Integer.class)){
+			if (this.spokesperson == null)
+				super.setAuthorised(false);
+			else 
+				super.setAuthorised(true);
+		// hola
+		}else{
+			if (this.campaign == null)
+				super.setAuthorised(false);
+			else if (this.spokesperson.getUserAccount().getUsername().equals(super.getRequest().getPrincipal().getUsername()) || this.campaign.getDraftMode() == false)
+				super.setAuthorised(true);
+		}
 	}
 
 	@Override

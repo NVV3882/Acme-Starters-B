@@ -1,3 +1,4 @@
+
 package acme.features.any.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,20 +14,26 @@ import acme.realms.Manager;
 public class AnyManagerShowService extends AbstractService<Any, Manager> {
 
 	@Autowired
-	private ProjectRepository	repository;
+	AnyManagerRepository	repositorio;
 
-	private Manager				manager;
+	Manager					manager;
+
+	int						projectId;
+
 
 	@Override
 	public void load() {
-		int projectId = super.getRequest().getData("projectId", int.class);
-		Project project = this.repository.findProjectById(projectId);
-		this.manager = project != null ? project.getManager() : null;
+		this.projectId = super.getRequest().getData("projectId", int.class);
+		this.manager = this.repositorio.listManagersByProjectId(this.projectId).stream().findFirst().orElse(null);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(this.manager != null);
+		Project project = this.repositorio.findProjectById(this.projectId);
+		if (this.manager!= null && (project.getDraftMode() != false || this.manager.getUserAccount().getUsername().equals(super.getRequest().getPrincipal().getUsername()))
+			super.setAuthorised(true);
+		else
+			super.setAuthorised(false);
 	}
 
 	@Override

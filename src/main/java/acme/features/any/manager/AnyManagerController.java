@@ -20,4 +20,5 @@ public class AnyManagerController extends AbstractController<Any, Manager> {
 		super.addBasicCommand("show", AnyManagerShowService.class);
 	}
 
+
 }

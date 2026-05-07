@@ -24,7 +24,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.strategies" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.auditReports" action="/any/audit-report/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.campaigns" action="/any/campaign/list"/>
-			
+			<acme:menu-suboption code="master.menu.anonymous.projects" action="/any/project/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
@@ -83,6 +83,8 @@
 			<acme:menu-suboption code="master.menu.user-account.inventor-profile" action="/authenticated/inventor/update" access="hasRealm('Inventor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-spokesperson" action="/authenticated/spokesperson/create" access="!hasRealm('Spokesperson')"/>
 			<acme:menu-suboption code="master.menu.user-account.spokesperson-profile" action="/authenticated/spokesperson/update" access="hasRealm('Spokesperson')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-manager" action="/authenticated/manager/create" access="!hasRealm('Manager')"/>
+			<acme:menu-suboption code="master.menu.user-account.manager-profile" action="/authenticated/manager/update" access="hasRealm('Manager')"/>
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>

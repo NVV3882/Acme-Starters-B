@@ -75,7 +75,7 @@ public class Project extends AbstractEntity {
 	@Transient
 	@Mandatory
 	@Valid
-	public Double effort() {
+	public Double getEffort() {
 		return 0.;
 	}
 

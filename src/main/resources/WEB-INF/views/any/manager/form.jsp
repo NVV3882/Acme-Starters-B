@@ -4,12 +4,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form readonly="true">
-
 	<acme:form-textbox code="any.manager.form.label.position" path="position"/>
-	
 	<acme:form-textarea code="any.manager.form.label.skills" path="skills"/>
-	
 	<acme:form-checkbox code="any.manager.form.label.executive" path="executive"/>
-	
-
 </acme:form>

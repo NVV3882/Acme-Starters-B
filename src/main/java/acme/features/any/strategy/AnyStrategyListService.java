@@ -18,10 +18,16 @@ public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 
 	private Collection<Strategy>	strategy;
 
+	int								strategyId;
+
 
 	@Override
 	public void load() {
-		this.strategy = this.repository.listAllStrategies();
+		if (super.getRequest().hasData("projectId", Integer.class)) {
+			Integer projectId = super.getRequest().getData("projectId", Integer.class);
+			this.strategy = this.repository.listAllStrategiesByProjectId(projectId);
+		} else
+			this.strategy = this.repository.listAllStrategies();
 	}
 
 	@Override

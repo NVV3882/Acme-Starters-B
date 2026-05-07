@@ -17,11 +17,16 @@ public class AnyInventionListService extends AbstractService<Any, Invention> {
 	AnyInventionRepository	repositorio;
 
 	Collection<Invention>	inventos;
+	int						projectId;
 
 
 	@Override
 	public void load() {
-		this.inventos = this.repositorio.listAllInventions();
+		if (super.getRequest().hasData("projectId", Integer.class)) {
+			Integer projectId = super.getRequest().getData("projectId", Integer.class);
+			this.inventos = this.repositorio.listAllInventionsByProjectId(projectId);
+		} else
+			this.inventos = this.repositorio.listAllInventions();
 	}
 
 	@Override
