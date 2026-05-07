@@ -1,0 +1,33 @@
+# messages-en.i18n
+
+manager.project.list.title = Listing projects
+
+manager.project.list.label.title = Title
+manager.project.list.label.keyWords = Keywords
+manager.project.list.label.kickOffMoment = Kick-off moment
+manager.project.list.label.closeOutMoment = Close-out moment
+manager.project.list.label.momentOfPublication = Publication moment
+manager.project.list.label.draftMode = Draft mode
+manager.project.list.button.create = Create project
+
+
+manager.project.form.title = Project details
+
+manager.project.form.label.title = Title:
+manager.project.form.label.keyWords = Keywords:
+manager.project.form.label.description = Description:
+manager.project.form.label.kickOffMoment = Kick-off moment:
+manager.project.form.label.closeOutMoment = Close-out moment:
+manager.project.form.label.momentOfPublication = Publication moment:
+manager.project.form.label.effort = Effort (months):
+
+manager.project.form.button.inventions = Inventions
+manager.project.form.button.campaigns = Campaigns
+manager.project.form.button.strategies = Strategies
+manager.project.form.button.members = Members
+manager.project.form.button.manager = Manager
+manager.project.form.button.publish = Publish
+manager.project.form.button.create = Create
+
+# Error messages
+# (Add project-specific errors here if needed)

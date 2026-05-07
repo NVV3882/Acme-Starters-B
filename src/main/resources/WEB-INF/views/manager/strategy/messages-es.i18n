@@ -1,0 +1,17 @@
+# messages-es.i18n
+
+manager.strategy.list.title = Lista de estrategias
+manager.strategy.list.label.ticker = Ticker
+manager.strategy.list.label.name = Nombre
+manager.strategy.list.label.startMoment = Fecha de inicio
+manager.strategy.list.label.endMoment = Fecha de fin
+
+manager.strategy.form.title = Detalles de la estrategia
+manager.strategy.form.label.ticker = Ticker
+manager.strategy.form.label.name = Nombre
+manager.strategy.form.label.description = Descripcion
+manager.strategy.form.label.startMoment = Fecha de inicio
+manager.strategy.form.label.endMoment = Fecha de fin
+manager.strategy.form.label.moreInfo = Mas informacion
+manager.strategy.form.label.monthsActive = Meses activo
+manager.strategy.form.label.expectedPercentage = Porcentaje esperado

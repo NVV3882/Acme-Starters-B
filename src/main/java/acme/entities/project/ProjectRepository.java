@@ -1,6 +1,7 @@
 
 package acme.entities.project;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.campaign.Campaign;
 import acme.entities.invention.Invention;
 import acme.entities.strategy.Strategy;
+import acme.entities.project.InvolvedIn;
 
 @Repository
 public interface ProjectRepository extends AbstractRepository {
@@ -57,5 +59,9 @@ public interface ProjectRepository extends AbstractRepository {
 
 	@Query("select case when (count(s) > 0) then true else false end from Strategy s where s.project.id = :id and s.draftMode = true")
 	boolean existsStrategiesWithDraftModeTrueByProjectId(int id);
+
+	@Query("select i from InvolvedIn i where i.project.id = :id")
+	Collection<InvolvedIn> findMembersByProjectId(int id);
+
 
 }

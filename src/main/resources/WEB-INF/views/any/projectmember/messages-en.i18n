@@ -1,0 +1,5 @@
+any.projectmember.list.title = Project members list
+any.projectmember.list.label.username = Username
+any.projectmember.list.column.action = Action
+any.projectmember.list.button.show = View Profile
+any.projectmember.form.label.username = Username

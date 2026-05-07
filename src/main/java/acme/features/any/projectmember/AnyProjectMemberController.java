@@ -1,5 +1,4 @@
-
-package acme.features.any.manager;
+package acme.features.any.projectmember;
 
 import javax.annotation.PostConstruct;
 
@@ -8,17 +7,17 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Any;
 import acme.client.controllers.AbstractController;
-import acme.realms.Manager;
+import acme.realms.ProjectMember;
 
 @Controller
-public class AnyManagerController extends AbstractController<Any, Manager> {
+public class AnyProjectMemberController extends AbstractController<Any, ProjectMember> {
 
 	@PostConstruct
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("show", AnyManagerShowService.class);
+		super.addBasicCommand("list", AnyProjectMemberListService.class);
+		super.addBasicCommand("show", AnyProjectMemberShowService.class);
 	}
-
 
 }

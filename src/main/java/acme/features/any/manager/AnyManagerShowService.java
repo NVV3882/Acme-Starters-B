@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.project.Project;
+import acme.entities.project.ProjectRepository;
 import acme.realms.Manager;
 
 @Service
@@ -29,10 +30,10 @@ public class AnyManagerShowService extends AbstractService<Any, Manager> {
 	@Override
 	public void authorise() {
 		Project project = this.repositorio.findProjectById(this.projectId);
-		if (project.getDraftMode() != false)
-			super.setAuthorised(false);
-		else
+		if (this.manager!= null && (project.getDraftMode() != false || this.manager.getUserAccount().getUsername().equals(super.getRequest().getPrincipal().getUsername()))
 			super.setAuthorised(true);
+		else
+			super.setAuthorised(false);
 	}
 
 	@Override
