@@ -61,6 +61,8 @@ master.menu.user-account.become-auditor = Hacerse auditor
 master.menu.user-account.auditor-profile = Perfil de auditor
 master.menu.user-account.become-spokesperson = Hacerse portavoz
 master.menu.user-account.spokesperson-profile = Perfil de portavoz
+master.menu.user-account.become-manager = Hacerse manager
+master.menu.user-account.manager-profile = Perfil de manager
 
 # master.menu.inventor ####################################################
 
