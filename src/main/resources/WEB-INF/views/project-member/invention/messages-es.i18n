@@ -1,0 +1,18 @@
+# messages-es.i18n
+
+project-member.invention.list.title = Lista de inventos
+manager.invention.list.label.ticker = Ticker
+manager.invention.list.label.name = Nombre
+manager.invention.list.label.startMoment = Fecha de inicio
+manager.invention.list.label.endMoment = Fecha de fin
+manager.invention.list.label.draftMode = Modo borrador
+
+project-member.invention.form.title = Detalles del invento
+manager.invention.form.label.ticker = Ticker
+manager.invention.form.label.name = Nombre
+manager.invention.form.label.description = Descripcion
+manager.invention.form.label.startMoment = Fecha de inicio
+manager.invention.form.label.endMoment = Fecha de fin
+manager.invention.form.label.moreInfo = Mas informacion
+manager.invention.form.label.monthsActive = Meses activo
+manager.invention.form.label.cost = Coste

@@ -1,0 +1,13 @@
+# messages-es.i18n
+
+project-member.spokesperson.list.title = Listado de portavoces
+
+any.spokesperson.list.label.cv = CV
+any.spokesperson.list.label.achievements = Logros
+any.spokesperson.list.label.licensed = Licenciado
+
+project-member.spokesperson.form.title = Detalles del portavoz
+
+any.spokesperson.form.label.cv = CV:
+any.spokesperson.form.label.achievements = Logros:
+any.spokesperson.form.label.licensed = Licenciado

@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
-import acme.entities.strategy.Fundraiser;
+import acme.realms.Fundraiser;
 import acme.realms.Inventor;
 import acme.realms.Manager;
 import acme.realms.ProjectMember;

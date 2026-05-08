@@ -64,8 +64,8 @@
 			<acme:menu-suboption code="master.menu.spokesperson.list-campaigns" action="/spokesperson/campaign/list"/>			
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.manager" access="hasRealm('Manager')">
-			<acme:menu-suboption code="master.menu.manager.list-projects" action="/manager/project/list"/>			
+		<acme:menu-option code="master.menu.manager" access="hasRealm('Inventor') || hasRealm('Manager') || hasRealm('Spokesperson') || hasRealm('Fundraiser')">
+			<acme:menu-suboption code="master.menu.manager.list-projects" action="/project-member/project/list"/>			
 		</acme:menu-option>
 		
 	</acme:menu-left>

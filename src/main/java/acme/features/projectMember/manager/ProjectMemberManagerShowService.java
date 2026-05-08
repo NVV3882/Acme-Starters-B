@@ -1,23 +1,23 @@
 
-package acme.features.any.manager;
+package acme.features.projectMember.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.project.Project;
 import acme.realms.Manager;
+import acme.realms.ProjectMember;
 
 @Service
-public class AnyManagerShowService extends AbstractService<Any, Manager> {
+public class ProjectMemberManagerShowService extends AbstractService<ProjectMember, Manager> {
 
 	@Autowired
-	AnyManagerRepository	repositorio;
+	ProjectMemberManagerRepository	repositorio;
 
-	Manager					manager;
+	Manager							manager;
 
-	int						projectId;
+	int								projectId;
 
 
 	@Override
@@ -29,7 +29,8 @@ public class AnyManagerShowService extends AbstractService<Any, Manager> {
 	@Override
 	public void authorise() {
 		Project project = this.repositorio.findProjectById(this.projectId);
-		if (this.manager != null && (project.getDraftMode() == false || this.manager.getUserAccount().getUsername().equals(super.getRequest().getPrincipal().getUsername())))
+		String username = super.getRequest().getPrincipal().getUsername();
+		if (this.repositorio.isProjectMember(this.projectId, username) && project != null)
 			super.setAuthorised(true);
 		else
 			super.setAuthorised(false);

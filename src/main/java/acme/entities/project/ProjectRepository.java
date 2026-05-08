@@ -12,7 +12,6 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.campaign.Campaign;
 import acme.entities.invention.Invention;
 import acme.entities.strategy.Strategy;
-import acme.entities.project.InvolvedIn;
 
 @Repository
 public interface ProjectRepository extends AbstractRepository {
@@ -63,5 +62,7 @@ public interface ProjectRepository extends AbstractRepository {
 	@Query("select i from InvolvedIn i where i.project.id = :id")
 	Collection<InvolvedIn> findMembersByProjectId(int id);
 
+	@Query("select count(ii) > 0 from InvolvedIn ii where ii.project.id = :projectId and ii.member.userAccount.username = :username")
+	Boolean isProjectMember(int projectId, String username);
 
 }

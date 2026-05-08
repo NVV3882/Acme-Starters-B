@@ -17,4 +17,7 @@ public interface CampaignRepository extends AbstractRepository {
 
 	@Query("select c from Campaign c where c.ticker = :ticker")
 	Campaign findCampaignByTicker(String ticker);
+
+	@Query("select count(ii) > 0 from InvolvedIn ii where ii.project.id = :projectId and ii.member.userAccount.username = :username")
+	Boolean isProjectMember(int projectId, String username);
 }

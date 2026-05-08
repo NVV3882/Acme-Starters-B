@@ -1,0 +1,13 @@
+# messages-en.i18n
+
+project-member.fundraiser.list.title = Listing of fundraisers
+
+manager.fundraiser.list.label.bank = Bank
+manager.fundraiser.list.label.statement = Statement
+manager.fundraiser.list.label.agent = Agent
+
+project-member.fundraiser.form.title = Fundraiser details
+
+manager.fundraiser.form.label.bank = Bank
+manager.fundraiser.form.label.statement = Statement
+manager.fundraiser.form.label.agent = Agent
