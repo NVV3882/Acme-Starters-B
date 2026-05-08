@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Fundraiser;
+import acme.realms.Fundraiser;
 import acme.realms.Inventor;
 import acme.realms.Manager;
 import acme.realms.ProjectMember;
@@ -46,18 +46,14 @@ public class AnyProjectMemberShowService extends AbstractService<Any, ProjectMem
 	@Override
 	public void unbind() {
 		super.unbindObject(this.member, "userAccount.username");
-		if (this.manager != null) {
+		if (this.manager != null)
 			super.unbindGlobal("manager", this.manager);
-		}
-		if (this.spokesperson != null) {
+		if (this.spokesperson != null)
 			super.unbindGlobal("spokesperson", this.spokesperson);
-		}
-		if (this.fundraiser != null) {
+		if (this.fundraiser != null)
 			super.unbindGlobal("fundraiser", this.fundraiser);
-		}
-		if (this.inventor != null) {
+		if (this.inventor != null)
 			super.unbindGlobal("inventor", this.inventor);
-		}
 	}
 
 }

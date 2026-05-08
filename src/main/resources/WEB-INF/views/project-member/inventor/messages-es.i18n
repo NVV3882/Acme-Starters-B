@@ -1,0 +1,13 @@
+# messages-es.i18n
+
+project-member.inventor.list.title = Listado de inventores
+
+any.inventor.list.label.bio = Bio
+any.inventor.list.label.keyWords = Palabras clave
+any.inventor.list.label.licensed = Licenciado
+
+project-member.inventor.form.title = Detalles de un inventor
+
+any.inventor.form.label.bio = Bio:
+any.inventor.form.label.keyWords = Palabras Clave:
+any.inventor.form.label.licensed = Licenciado:

@@ -49,7 +49,7 @@ master.menu.auditor.list-my-audit-reports = My audit reports
 
 # master.menu.manager ##########################################################
 
-master.menu.manager = Manager
+master.menu.manager = Project Member
 master.menu.manager.list-projects = My projects
 
 # master.menu.user-account ####################################################

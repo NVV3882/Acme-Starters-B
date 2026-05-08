@@ -1,0 +1,13 @@
+# messages-en.i18n
+
+project-member.inventor.list.title = Listing of inventors
+
+any.inventor.list.label.bio = Bio
+any.inventor.list.label.keyWords = Keywords
+any.inventor.list.label.licensed = Licensed
+
+project-member.inventor.form.title = inventor details
+
+any.inventor.form.label.bio = Bio:
+any.inventor.form.label.keyWords = KeyWords:
+any.inventor.form.label.licensed = Licensed:
