@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+// fontsize=10
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>176</x>
+      <y>32</y>
+      <w>368</w>
+      <h>752</h>
+    </coordinates>
+    <panel_attributes>Additional constraints features
+--
+
+- A project member cannot be added more than once to the
+same project.
+
+- Once a project is published, it cannot be updated in 
+any way. This includes its attributes, its members, 
+and its associated components (inventions, campaigns, and strategies).
+
+- If a manager add a member to a project, you can´t go back to
+the past. That means that you can´t edit or delete the
+member.
+
+- kickOffMoment/closeOutMoment must be a valid time interval
+in future wrt. the moment when a proyect is published.
+
+- If a project is published, inventors, spokes people 
+and foundraisers can not add their composites to that
+project. 
+
+- If a project is published, the manager can not 
+add any new inventor, spoke person or fundraiser. 
+
+- A project can not be deleted.
+
+- Projects cannot be published unless they have
+at least one invention
+
+- Publishing a project implies that its components
+(inventions, campaigns and strategies) must be 
+published automatically, so their atributes 
+startMoment and endMoment, must be inside the range
+of kickOffMoment and closeOutMoment
+
+kickOffMoment &lt;= MIN(startMoment de componentes)
+closeOutMoment &gt;= MAX(endMoment de componentes)
+
+- Publishing a project implies that its components
+(inventions, campaigns and strategies) must be 
+published automatically, so the system must check if 
+each project components (inventions, campaigns
+and strategies) have one or more components vinculated
+(part | milestone | tactic)
+
+- A sponsor could attach a sponsorship to a project 
+only if the sponsorship and the project are 
+published, and the startMoment of the sponsorship 
+must be equal or after the momentOfPublication of the project
+
+sponsorship.startMoment &gt;= project.momentOfPublication
+
+- An audit could attach an audit report to a project 
+only if the audit report and the project are 
+published, and the startMoment of the audit report
+must be equal or after the momentOfPublication of the project
+
+audit.startMoment &gt;= project.closeOutMoment
+
+bg=RED
+layer=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>608</x>
+      <y>16</y>
+      <w>336</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>Additional constraints Dashboard
+--
+
+- numberOfProjectsManaged is the total number of projects that 
+the Manager manage
+
+- deviationOfProjectsManaged is the  difference between 
+numberOfProjectsManaged with respect to the average number
+of projects managed by the other managers (OTHER).
+
+if there is only 1 manager that attribute is NA.
+
+Calculation: A - B, where A is the number of projects of 
+the current manager and B is the average of the others.
+Using the absolute value ensures the deviation is always a
+positive magnitude.
+
+- minimumEffort is the lowest effort value recorded among 
+the set of projects belonging to a manager.
+
+- maximumEffort is the highest effort value recorded among
+the set of projects belonging to a manager.
+
+- averageEffort is the arithmetic mean of the effort scores 
+across all projects managed by a specific manager
+
+- deviationEffort is the standard deviation of the effort
+values across all projects managed by a single manager.
+
+Calculation: It is calculated using the square root of the 
+variance (the average of the squared differences of 
+the projects efforts from the mean (the mean of the 
+projects efforts)
+
+
+
+bg=RED
+
+layer=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>504</y>
+      <w>376</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Dashboard
+--
++ numberOfProjectsManaged: Integer { Mandatory, Valid, Transient}
++ deviationOfProjectsManaged: Double { Mandatory, Valid, Transient}
++ minimumEffort: Double { Mandatory, Valid, Transient}
++ maximumEffort: Double { Mandatory, Valid, Transient}
++ averageEffort: Double { Mandatory, Valid, Transient}	
++ deviationEffort: Double {Mandatory, Valid, Transient}
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>664</y>
+      <w>280</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+AdBanner
+--
++ slogan: String { Mandatory, ValidHeader, Column }
++ targetUrl: String { Mandatory, ValidUrl, Column }
++ pictureUrl: String { Mandatory, ValidUrl, Column }
+
+bg=GREEN</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
